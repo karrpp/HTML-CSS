@@ -1,0 +1,23 @@
+.container div {
+  width: auto;
+  inline-size: auto;
+  height: auto;
+  block-size: auto;
+  text-align: center;
+  line-height: 100px;
+}
+.container {
+  border: 10px solid currentColor;
+}
+.box1 {
+  background-color: aqua;
+}
+.box2 {
+  background-color: antiquewhite;
+}
+.box3 {
+  background-color: skyblue;
+}
+.box4 {
+  background-color: yellow;
+}

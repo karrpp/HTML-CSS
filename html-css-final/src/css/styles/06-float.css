@@ -1,0 +1,73 @@
+@import "./../../common/normalize.css";
+
+/* 본문의 기본 글꼴을 Pretendard Variable로 지정  */
+body{
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+/* float 속성 활용하기  */
+.float-text{
+  background-color: yellow;
+  /* float 요소 박스의 높이를 부모 요소가 포함해서 렌더링 */
+  display: flow-root;
+
+  .float-box{
+    border: 5px solid red;
+    width: 100px;
+    inline-size: 100px;
+    height: 100px;
+    block-size: 100px;
+    background-color: pink;
+    /* 부모 영역만큼의 라인 박스 안에서 왼쪽(inline-start)으로 배치 */
+    float: left;
+    float: inline-start;
+  }
+}
+
+/* clear 속성 활용하기 */
+.float-clear{
+  background-color: lightgreen;
+  /* float 요소박스의 높이를 부모 요소가 포함해서 렌더링 */
+  display: flow-root;
+
+  .float-box{
+    border: 5px solid blue;
+    width: 100px;
+    inline-size: 100px;
+    height: 100px;
+    block-size: 100px;
+    background-color: yellow;
+    /* 부모 영역만큼의 라인 박스 안에서 왼쪽(inline-start)으로 배치 */
+    float: left;
+    float: inline-start;
+  }
+
+  /* float 된 요소 박스와 텍스트가 분리되어 배치  */
+  .clear-box{
+    clear: both;
+  }
+}
+
+/* 리스트 스타일링, 플로트 컬럼 레이아웃 */
+.float-layout{
+  background-color: skyblue;
+  display: flow-root;
+  padding: 10px;
+  
+  ul{
+    list-style: "";
+    float: right;
+    float: inline-end;
+  }
+
+  li{
+    background-color: sandybrown;
+    padding: 10px;
+    border: 5px solid green;
+    float: left;
+    float: inline-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-inline: 10px;
+  }
+}
